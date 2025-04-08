@@ -1,0 +1,50 @@
+
+.product-page{
+  max-width: 853px;
+  margin-inline: auto;
+  padding: 20px;
+  
+}
+
+
+
+
+/* FILTRO */
+
+.product-page__search{
+  background-color: var(--light-color-1);
+  border: solid 1px var(--dark-color-1);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-page__icon{
+  font-size: 1rem;
+  color: var(--light-color-2);
+}
+.product-page__icon--clickable{
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &:hover{
+    color: var(--dark-color-2);
+  }
+}
+
+.product-page__input{
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: var(--smaller-text);
+  color: var(--light-color-2);
+  background-color: transparent;
+}
+
+/* ESCONDIDA */
+
+.hidden{
+  display: none;
+}

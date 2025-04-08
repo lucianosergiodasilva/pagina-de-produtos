@@ -1,0 +1,56 @@
+
+
+.heart{
+    display: block;
+    width: 72px;
+    height: 72px;
+    background: url("../../assets/img-2060x72.png") no-repeat;
+    background-position: left;
+    background-size: 2060px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.heart.heart-active{
+    background-position: right;
+    animation: animate .8s steps(28) 1;
+}
+
+.produto__curtida{
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.curtida__container{
+    position: relative;
+}
+
+.heart__background{
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .3s ease-in;
+    position: absolute;
+    top: calc(72px / 2 - 20px);
+    right: calc(72px / 2 - 20px);
+    z-index: 8888;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left;
+     }
+    100% {
+        background-position: right;
+    }
+}

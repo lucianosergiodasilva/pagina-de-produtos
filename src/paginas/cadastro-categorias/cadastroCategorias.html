@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Categorias</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="cadastro-categorias.css">
+</head>
+<body>
+    <section class="category-page">
+        <header class="category-page__header">
+            <button type="button" class="header__button"><</button>
+            <h1>Categorias</h1>
+        </header>
+        <main>
+            <form class="container">
+                <label class="picture" tabindex="0">
+                    <input type="file" accept="image/*" class="picture__input">
+                    <span class="picture__image">Escolha uma imagem</span>
+                </label>
+                <input class="category-page__input-name" type="text" name="" id="" placeholder="Nome da categoria">
+                <input class="category-page__input-alt" type="text" name="" id="" placeholder="Texto alternativo">
+                <div>
+                    <button class="category-page__button-add" type="button">Adicionar categoria</button>
+                    <button class="category-page__button-cancel" type="button">Cancelar</button>
+                </div>
+            </form>
+            <section class="categorias-adicionadas">
+                <h2>Nenhuma categoria adicionada</h2>
+            </section>
+        </main>
+    </section>
+</body>
+</html>

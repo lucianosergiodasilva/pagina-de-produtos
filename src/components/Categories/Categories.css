@@ -1,0 +1,145 @@
+
+/* CATEGORIAS */
+
+.categoria{ 
+
+    & h2{
+        margin-bottom: 10px;
+    }
+  }
+
+.slider{
+    color: #fff;
+    padding: 1rem;
+    border-radius: .6rem;
+    position: relative;
+}
+
+.left-arrow, .right-arrow{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    text-align: center;
+    font: 200 2rem / 2.4rem sans-serif;
+    color: var(--light-color-2);
+    transition: all .2s ease-in-out;
+}
+
+.icon span:hover{
+    background-color: var(--light-color-4);
+    color: #fff;
+    cursor: pointer;
+}
+
+.tabs{
+    max-width: 100%;
+    display: flex;
+    gap: .8rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.tabs::-webkit-scrollbar{
+    display: none;
+}
+
+.tab{
+    white-space: nowrap;  /* Evita a quebra de linha */
+    background-color: var(--light-color-1);
+    border: solid 1px var(--dark-color-1);
+    border-radius: var(--border-radius);
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    transition: .2s ease-in-out;
+    list-style: none;
+    display: grid;
+    place-items: center;
+    color: var(--dark-color-2);
+}
+
+.tab *{
+    pointer-events: none;
+    user-select: none;
+}
+
+.tab:first-child{
+    padding: .5rem 1.3rem;
+}
+
+.tab.active:hover{
+    background-color: var(--dark-color-4);
+    border: solid 1px var(--dark-color-4);
+    color: #fff;
+    cursor: pointer;
+}
+.tab.active{
+    background-color: var(--light-color-4);
+    border: solid 1px var(--dark-color-4);
+    color: #fff;
+    cursor: pointer;
+}
+
+.tab:hover{
+    background-color: var(--dark-color-1);
+    border: solid 1px var(--light-color-1);
+    color: var(--dark-color-2);
+    cursor: pointer;
+}
+
+.titulo{
+    margin-top: 10px;
+}
+
+.icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6rem;
+    height: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon.hide{
+    display: none;
+}
+
+.icon:first-child{
+    border-radius: .6rem;
+    background: linear-gradient(to right, #fff 45%, transparent);
+    left: 0;
+}
+.icon:last-child{
+    border-radius: .6rem;
+    justify-content: flex-end;
+    background: linear-gradient(to left, #fff 45%, transparent);
+    right: 0;
+}
+
+.icon span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon span *{
+    pointer-events: none;
+}
+
+.icon-todos{
+    font-size: 2rem;
+    color: var(--dark-color-2);
+}
+
+
+
+@media (max-width: 430px) {
+
+    .slider{
+        padding: 0;
+    }
+
+    .icon{display: none;}
+}

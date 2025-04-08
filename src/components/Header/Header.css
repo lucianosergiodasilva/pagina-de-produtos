@@ -1,0 +1,25 @@
+.category-page__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__icon{
+    background-color: var(--light-color-1);
+    border: solid 1px var(--dark-color-1);
+    border-radius: 50%;
+    color: var(--dark-color-2);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+}
+
+.header__icon:hover{
+    cursor: pointer;
+    background-color: var(--dark-color-1);
+    animation: animate-btn-plus .3s ease-in;
+
+}

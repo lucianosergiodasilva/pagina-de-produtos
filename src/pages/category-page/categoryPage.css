@@ -1,0 +1,10 @@
+input[type="text"]{
+    background-color: var(--light-color-1);
+    border: solid 1px var(--dark-color-1);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
