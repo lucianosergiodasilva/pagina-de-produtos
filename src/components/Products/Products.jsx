@@ -10,7 +10,7 @@ const Products = () => {
     const [produtos, setProdutos] = useState([
         {
             id:'1',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/pizza.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/marguerita.png?raw=true',
             alt: 'Foto de uma pizza Marguerita',
             titulo: 'Márguerita',
             categoria: 'Pizza',
@@ -19,7 +19,7 @@ const Products = () => {
         },
         {
             id:'2',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/calabresa.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/calabresa.png?raw=true',
             alt: 'Foto de uma pizza Calabresa',
             titulo: 'Calabresa',
             categoria: 'Pizza',
@@ -28,7 +28,7 @@ const Products = () => {
         },
         {
             id:'3',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/palmito.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/palmito.png?raw=true',
             alt: 'Foto de uma pizza Palmito',
             titulo: 'Palmito',
             categoria: 'Pizza',
@@ -37,7 +37,7 @@ const Products = () => {
         },
         {
             id:'4',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/pepperoni.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/pepperoni.png?raw=true',
             alt: 'Foto de uma pizza Pepperoni',
             titulo: 'Pepperoni',
             categoria: 'Pizza',
@@ -46,7 +46,7 @@ const Products = () => {
         },
         {
             id:'5',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/tomate.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/tomate.png?raw=true',
             alt: 'Foto de uma pizza Tomate',
             titulo: 'Tomate',
             categoria: 'Pizza',
@@ -55,7 +55,7 @@ const Products = () => {
         },
         {
             id:'6',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/vegetariana.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/vegetariana.png?raw=true',
             alt: 'Foto de uma pizza Vegetariana',
             titulo: 'Cogumelo Vegetariano',
             categoria: 'Pizza',
@@ -64,7 +64,7 @@ const Products = () => {
         },
         {
             id:'7',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/burger1.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/burger1.png?raw=true',
             alt: 'Foto de um hamburguer',
             titulo: 'Burger Batata',
             categoria: 'Burguer',
@@ -73,7 +73,7 @@ const Products = () => {
         },
         {
             id:'8',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/produtos/burger2.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-produtos/burger2.png?raw=true',
             alt: 'Foto de um hamburguer',
             titulo: 'Burger Salada',
             categoria: 'Burguer',

@@ -8,73 +8,73 @@ const Categories = () => {
     const [item, setItem] = useState([
         {
             id: '1',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/pizza.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/pizza.png?raw=true',
             alt: 'Categoria da pizza',
             title: 'Pizza'
         },
         {
             id: '2',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/burguer.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/burguer.png?raw=true',
             alt: 'Categoria do burguer',
             title: 'Burguer'
         },
         {
             id: '3',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/hot-dog.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/hot-dog.png?raw=true',
             alt: 'Categoria do hot-dog',
             title: 'Hot-dog'
         },
         {
             id: '4',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/sorvete.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/sorvete.png?raw=true',
             alt: 'Categoria do sorvete',
             title: 'Sorvete'
         },
         {
             id: '5',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/sushi.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/sushi.png?raw=true',
             alt: 'Categoria do sushi',
             title: 'Sushi'
         },
         {
             id: '6',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/donut.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/donut.png?raw=true',
             alt: 'Categoria do donut',
             title: 'Donut'
         },
         {
             id: '7',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/batata.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/batata.png?raw=true',
             alt: 'Categoria da batata',
             title: 'Batata'
         },
         {
             id: '8',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/sorvete.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/sorvete.png?raw=true',
             alt: 'Categoria da sorvete',
             title: 'Sorvete'
         },
         {
             id: '9',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/pizza.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/pizza.png?raw=true',
             alt: 'Categoria da Pizza',
             title: 'Pizza'
         },
         {
             id: '10',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/burguer.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/burguer.png?raw=true',
             alt: 'Categoria da burguer',
             title: 'Burguer'
         },
         {
             id: '11',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/hot-dog.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/hot-dog.png?raw=true',
             alt: 'Categoria da hot-dog',
             title: 'Hot-dog'
         },
         {
             id: '12',
-            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/img-crop/sorvete.png?raw=true',
+            src: 'https://github.com/lucianosergiodasilva/pagina-de-produtos/blob/main/src/assets/img-categorias/sorvete.png?raw=true',
             alt: 'Categoria da sorvete',
             title: 'Sorvete'
         }
