@@ -14,7 +14,7 @@ Ao clicar em um botão de categoria, o mesmo desliza e se coloca automaticamente
 
 ## Seção de produtos
 
-A seção de produtos exibe todos os produtos de um array, onde cada produto possui um animação ao passar o mouse, assim como uma animação bem intessante quando clicamos no ícone do coração para curtir.
+A seção de produtos exibe todos os produtos de um array, onde cada produto possui uma animação ao passar o mouse, assim como uma animação bem intessante quando clicamos no ícone do coração para curtir.
 
 ### Mensagem de erro
 
