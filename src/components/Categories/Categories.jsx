@@ -148,6 +148,7 @@ const Categories = () => {
         // 
 
         const products = document.querySelectorAll('.produto')
+
         const activeCategoryTextContent = categoryTitle
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g,"")
@@ -160,26 +161,43 @@ const Categories = () => {
                 .normalize('NFD')
                 .replace(/[\u0300-\u036f]/g,"")
                 .toLowerCase()
-        
+                
             return !productCategory.includes(activeCategoryTextContent)
           })
           .forEach(product => {
-            product.classList.add('hidden')
-          })
-       
+              product.classList.add('hidden')
+            })
+        
         // Exibe todos os produtos
         Array.from(products)
-          .filter(product => {
+            .filter(product => {
             const productCategory = product.querySelector('.descricao__categoria').textContent
                 .normalize('NFD')
                 .replace(/[\u0300-\u036f]/g,"")
                 .toLowerCase()
         
-            return productCategory.includes(activeCategoryTextContent)
-          })
-          .forEach(product => {
-            product.classList.remove('hidden')
-          })
+                return productCategory.includes(activeCategoryTextContent)
+            })
+            .forEach(product => {
+                product.classList.remove('hidden')
+            })
+        
+        // Produtos visíveis ou encontrados
+        const visibleProducts = Array.from(products)
+            .filter(product => {
+            const productCategory = product.querySelector('.descricao__categoria').textContent
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g,"")
+                .toLowerCase()
+        
+                return productCategory.includes(activeCategoryTextContent)
+            })
+    
+        // Se o produto não for encontrado, mostre uma mensagem de erro
+        if(visibleProducts.length == 0){
+              document.querySelector('.product-notFound').classList.remove('hidden')
+        } 
+        
     }
 
     // Esconde e mostra as setas. Obtém o scrollLeft de "tabs"
@@ -215,14 +233,15 @@ const Categories = () => {
         const products = document.querySelectorAll('.produto')
 
         Array.from(products)
-        .filter(product => {
-          const productCategory = product.querySelector('.descricao__categoria').textContent
-          return productCategory.includes(inputValue)
-        })
-        .forEach(product => {
-          product.classList.remove('hidden')
-          document.querySelector('.product-notFound').classList.add('hidden')
-        })
+            .filter(product => {
+            const productCategory = product.querySelector('.descricao__categoria').textContent
+            return productCategory.includes(inputValue)
+            })
+            .forEach(product => {
+            product.classList.remove('hidden')
+            document.querySelector('.product-notFound').classList.add('hidden')
+            })
+
         document.querySelector('.product-page__input').value = ''
         document.querySelector('.product-page__input').focus()
         setInputValue('')

@@ -33,9 +33,14 @@ const Search = () => {
     })
 
   // Se o produto não foi encontrado
-  if(document.getElementsByClassName('hidden').length === 9){
-    document.querySelector('.product-notFound').classList.remove('hidden')
-  }
+  const hiddenElements = document.getElementsByClassName('hidden')
+  Array.from(hiddenElements)
+    .filter(element => {
+      return element.className.includes('hidden')
+    })
+    .forEach(element => {
+      document.querySelector('.product-notFound').classList.remove('hidden')
+    })
 
   // Obtém o valor do input
   function filterProduct(e){
