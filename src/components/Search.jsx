@@ -5,10 +5,13 @@ import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons"
 const Search = () => {
 
   const [inputValue, setInputValue] = useState('')
-  const products = document.querySelectorAll('.produto')
-
+  
+  const productsContainer = document.querySelector('.produtos')
+  const products = Array.from(productsContainer.children)
+  
   // Exibe produtos filtrados
-  Array.from(products)
+  // FALTA REFATORAR
+  products
     .filter(product => {
       const productTitle = product.querySelector('.descricao__titulo').textContent
         .normalize('NFD')
@@ -20,27 +23,36 @@ const Search = () => {
     .forEach(product => {
       product.classList.add('hidden')
     })
-  
+    
   // Exibe todos os produtos
-  Array.from(products)
+  // FALTA REFATORAR
+  products
     .filter(product => {
-      const productTitle = product.querySelector('.descricao__titulo').textContent
-      return productTitle.includes(inputValue)
-    })
+        const productTitle = product.querySelector('.descricao__titulo').textContent
+        return productTitle.includes(inputValue)
+      })
     .forEach(product => {
       product.classList.remove('hidden')
       document.querySelector('.product-notFound').classList.add('hidden')
     })
 
-  // Se o produto não foi encontrado
-  const hiddenElements = document.getElementsByClassName('hidden')
-  Array.from(hiddenElements)
-    .filter(element => {
-      return element.className.includes('hidden')
+  // Produtos visíveis ou encontrados
+  // FALTA REFATORAR
+  const visibleProducts = products
+    .filter(product => {
+      const productTitle = product.querySelector('.descricao__titulo').textContent
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g,"")
+        .toLowerCase()
+
+      return productTitle.includes(inputValue.trim())
     })
-    .forEach(element => {
+
+  // Se o produto não for encontrado, mostre uma mensagem de erro
+
+  if(visibleProducts.length == 0){
       document.querySelector('.product-notFound').classList.remove('hidden')
-    })
+  } 
 
   // Obtém o valor do input
   function filterProduct(e){
@@ -48,6 +60,7 @@ const Search = () => {
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g,"")
         .toLowerCase()
+        
     setInputValue(valorFiltrado)
   }
 
