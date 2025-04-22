@@ -6,56 +6,55 @@ const Search = () => {
 
   const [inputValue, setInputValue] = useState('')
   
-  const productsContainer = document.querySelector('.produtos')
-  const products = Array.from(productsContainer.children)
+  const products = Array.from(document.querySelectorAll('.produto'))
   
   // Exibe produtos filtrados
-  // FALTA REFATORAR
-  products
-    .filter(product => {
-      const productTitle = product.querySelector('.descricao__titulo').textContent
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g,"")
-        .toLowerCase()
-
-      return !productTitle.includes(inputValue.trim())
-    })
-    .forEach(product => {
-      product.classList.add('hidden')
-    })
+  hideProducts(products, inputValue)
     
   // Exibe todos os produtos
-  // FALTA REFATORAR
-  products
-    .filter(product => {
-        const productTitle = product.querySelector('.descricao__titulo').textContent
-        return productTitle.includes(inputValue)
-      })
-    .forEach(product => {
-      product.classList.remove('hidden')
-      document.querySelector('.product-notFound').classList.add('hidden')
-    })
+  showProducts(products, inputValue)
 
   // Produtos visíveis ou encontrados
-  // FALTA REFATORAR
-  const visibleProducts = products
-    .filter(product => {
-      const productTitle = product.querySelector('.descricao__titulo').textContent
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g,"")
-        .toLowerCase()
-
-      return productTitle.includes(inputValue.trim())
+  // Manipula as classes para exibir os produtos filtrados. Se o produto não for encontrado, mostre uma mensagem de erro
+  function manipulateClasses(products, add){
+    products.forEach(product => {
+      if(add){
+        product.classList.remove('hidden')
+        document.querySelector('.product-notFound').classList.add('hidden')
+      }else{
+        product.classList.add('hidden')
+        document.querySelector('.product-notFound').classList.remove('hidden')
+      }
     })
+  }
 
-  // Se o produto não for encontrado, mostre uma mensagem de erro
+  // Filtrar produtos
+  function filterProducts(products, inputValue, returnMatchedProdutcs){
+    return products
+      .filter(product => {
+        const productTitle = product.querySelector('.descricao__titulo').textContent
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g,"")
+          .toLowerCase()
+        const matchedProducts = productTitle.includes(inputValue)
+        return returnMatchedProdutcs ? matchedProducts : !matchedProducts
+      })
+  }
 
-  if(visibleProducts.length == 0){
-      document.querySelector('.product-notFound').classList.remove('hidden')
-  } 
+  // Exibe todos os produtos
+  function showProducts(products, inputValue){
+    const productsToShow = filterProducts(products, inputValue, true)
+    manipulateClasses(productsToShow, true)
+  }
+
+  // Exibe produtos filtrados
+  function hideProducts(products, inputValue){
+    const productsToHide = filterProducts(products, inputValue, false)
+    manipulateClasses(productsToHide, false)
+  }
 
   // Obtém o valor do input
-  function filterProduct(e){
+  function getInputValue(e){
     const valorFiltrado = e.target.value
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g,"")
@@ -76,7 +75,7 @@ const Search = () => {
     <div className='product-page__search container'>
       <div>
         <FontAwesomeIcon icon={faMagnifyingGlass} className='product-page__icon' />
-        <input type="text" placeholder='Procurar comida' className='product-page__input' value={inputValue} onChange={filterProduct} autoFocus />
+        <input type="text" placeholder='Procurar comida' className='product-page__input' value={inputValue} onChange={getInputValue} autoFocus />
       </div>
       <FontAwesomeIcon icon={faXmark} className='product-page__icon product-page__icon--clickable' onClick={clearInput} />
     </div>
